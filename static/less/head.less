@@ -1,0 +1,51 @@
+@keyframes marqueen {
+  0% {
+    transform: translateX(80%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+.headTop {
+  width: 1260px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  background: #333333;
+  color: #ffffff;
+  font-size: 14px;
+  .headTopLeft {
+    float: left;
+    width: 20%;
+    font-weight: bold;
+    text-align: right;
+  }
+  .headTopRight {
+    float: right;
+    width: 80%;
+    .marqueenTip {
+      display: inline-block;
+      color: rgb(255, 255, 102);
+      font-weight: bold;
+      float: left;
+      width: 20%;
+      text-align: right;
+    }
+  }
+  .marqueenWrap {
+    overflow: hidden;
+    width:80%;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    word-break: keep-all;
+    white-space: nowrap;
+    .headMarqueeContent {
+      -webkit-animation: marqueen 50s infinite;
+      -o-animation: marqueen 50s infinite;
+      animation: marqueen 50s infinite;
+    }
+  }
+
+}
+
