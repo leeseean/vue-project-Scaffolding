@@ -3,19 +3,21 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from 'axios'
+import Element from 'element-ui'
+import Vuex from 'vuex'
+import store from './vuex/store'
 
-import iView from 'iview'
-import 'iview/dist/styles/iview.css'
+Vue.use(Vuex)
+Vue.use(Element)
 
-import less from 'less'
-
+Vue.prototype.$ajax = axios
 Vue.config.productionTip = false
-Vue.use(iView)
-Vue.use(less)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   template: '<App/>',
+  store,
   components: { App }
 })
